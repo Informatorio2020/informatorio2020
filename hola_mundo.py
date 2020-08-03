@@ -12,4 +12,5 @@ print("Mas cambios desde el remoto para probar el merge")
 print("Rebase")
 print("Mas cambios desde el remoto para probar el merge")
 print("nuevos cambios desde el remoto para probar el rebase")
-
+print("Cambios hechos para probar el merge")
+print("Mas cambios desde el remoto para probar el merge")
