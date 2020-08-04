@@ -3,7 +3,9 @@
 #False en caso contrario. Escriba un programa principal que lea un número entero del usuario y 
 #muestre un mensaje que indique si es primo o no. Asegúrese de que el programa principal no 
 #se ejecutará si el archivo que contiene su solución se importa a otro programa.
-
+#
+#
+#
 
 def funcion(numero):
 	bandera = True
