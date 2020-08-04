@@ -19,5 +19,3 @@ for i in numeros:
 
 if auxiliar != "":
 	lista.append(auxiliar)
-
-print(lista)

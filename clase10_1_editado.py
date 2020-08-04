@@ -17,4 +17,3 @@ def funcion(numero):
 
 numero = int(input("Ingrese un numero"))
 
-print(funcion(numero))
