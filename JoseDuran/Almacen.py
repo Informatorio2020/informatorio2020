@@ -1,8 +1,8 @@
 # d. En un almacén se guarda mercadería en contenedores. No es posible colocar más de n 
 # contenedores uno encima del otro y, no hay área para más de 5 pilas de contenedores. 
 # Elabore un programa que permita gestionar el ingreso y salida de contenedores. 
-# Note que para retirar un contenedor es necesario retirar los contenedores que están
-# encima de él y colocarlos en otra pila.
+# Note que para retirar un contenedor es necesario retirar los contenedores que 
+# están encima de él y colocarlos en otra pila.
 
 def NumT(n):
 	A="000"+str(n)
@@ -118,6 +118,7 @@ def MostrarMenu(Opciones):
 
 import os
 from msvcrt import getch
+#Deposito = [[1, 2, 0, 0, 0, 0, 0], [3, 4, 5, 6, 7, 0, 0], [8, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
 Deposito = [[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
 UltContenedor=[0]; MaxCol=[8]; MaxPila=[7]; MaxContenedor=[(MaxPila[0]*(MaxCol[0]-1))+1]
 respuesta = [""]
