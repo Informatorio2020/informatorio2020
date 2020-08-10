@@ -235,7 +235,7 @@ class Agenda():
 
 	def buscar_contacto(self, nombre, apellido):
 		datos_contacto = "Contacto no encontrado"
-		for i in range(len(self.contactos)): # TypeError: cannot unpack non-iterable Contacto object
+		for i in range(len(self.contactos)): 
 			if self.contactos[i].nombre == nombre and self.contactos[i].apellido == apellido:
 				datos_contacto = i
 		return datos_contacto # Retorno la posición del objeto en la lista de self.contacto
@@ -339,29 +339,33 @@ class PruebaTiempo():
 
 	def __init__(self, objeto_tiempo):
 
-"""
 
+"""
 # LEVEL SILVER
 # Caso 1 - Pizzeria
+"""
+from shutil import get_terminal_size
 
 class Pizza():
 
-	def __init__(self, tamanio = 8, ingredientes, tipo_coccion):
+	def __init__(self, ingredientes, tipo_coccion, precio, tamanio = 8):
 		self.__tamanio = tamanio
 		self.__ingredientes = ingredientes
 		self.__tipo = tipo_coccion
+		self.__precio = precio
 
 	def get_tipo(self):
 		return self.tipo
 
+	def get_precio(self):
+		return self.__precio
+
+
 class Calabrese(Pizza):
 	pass
+
 
 class Muzzarella(Pizza):
-	pass
-
-
-class Calabrese(Pizza):
 	pass
 
 
@@ -373,3 +377,86 @@ class Napolitana(Pizza):
 	pass
 
 
+class Cliente():
+
+	def __init__(self, nombre, codigo):
+		self.nombre = nombre
+		self.codigo = codigo
+
+	def  get_nombre(self):
+		return self.nombre
+
+
+class Pedido():
+
+	def __init__(self, nombre_cliente, cantidad_pizzas, tamanio, variedad, fecha, hora_entrega):
+		self.cliente = nombre_cliente
+		self.cantidad = cantidad_pizzas
+		self.tamanio = tamanio
+		self.variedad = variedad
+		self.fecha = fecha
+		self.hora_entrega = hora_entrega
+
+	def get_variedad(self):
+		return self.variedad
+
+	def get_fecha(self):
+		return self.fecha
+
+
+class Factura(Pedido):
+
+	def __init__(self, nombre_cliente, cantidad_pizzas, tamanio, variedad, fecha, hora_entrega, monto):
+		Pedido.__init__(self, nombre_cliente, cantidad_pizzas, tamanio, variedad, fecha, hora_entrega)
+		self.monto = monto
+
+
+def obtener_variedad(nombre_variedad, tamanio, tipo_coccion):
+	if nombre_variedad == "mozzarella":
+		ingredientes = ["Queso", "Salsa"]
+		tamanio, precio = tamanio_costo(tamanio)
+		precio += 250
+		variedad = Mozarella(ingredientes, tipo_coccion, precio, tamanio)
+	elif nombre_variedad == "fugazzeta":
+		ingredientes = ["Queso", "Salsa", "Cebolla"]
+		tamanio, precio = tamanio_costo(tamanio)
+		precio += 280
+		variedad = Fugazzeta(ingredientes, tipo_coccion, precio, tamanio)
+	elif nombre_variedad == "calabrese":
+		ingredientes = ["Queso", "Salsa", "Salami"]
+		tamanio, precio = tamanio_costo(tamanio)
+		precio += 300
+		variedad = Calabrese(ingredientes, tipo_coccion, precio, tamanio)
+	elif nombre_variedad == "napolitana":
+		ingredientes = ["Queso", "Salsa", "Jamon"]
+		tamanio, precio = tamanio_costo(tamanio)
+		precio += 300
+		variedad = Napolitana(ingredientes, tipo_coccion, precio, tamanio)
+
+
+
+def tamanio_costo(tamanio): # Funcion que según el tamanio retorna una lista con el tamanio de la pizza y su costo que se suma al precio del menú.
+	if tamanio == 8:
+		tamanio_pizza = (8, 0)
+	elif tamanio == 10:
+		tamanio_pizza = (10, 30)
+	elif tamanio == 12:
+		tamanio_pizza = (12, 40)
+	else:
+		tamanio_pizza = None
+
+	return tamanio_pizza
+# Desarrollo de Funciones
+
+# Desarrollo del menú
+
+ancho_terminal = get_terminal_size()
+ancho_terminal = ancho_terminal[0]
+print("PZZERÍA - MENÚ".center(ancho_terminal))
+print("VARIEDADES:\nMuzzarella - Queso y salsa\nFugazzeta - Queso, salsa y cebolla\nCalabrese - Queso, salsa y salami\nNapolitana - Queso, salsa y jamón")
+variedad_pizza = int(input("\nElija una variedad:\n\n1- Mozzarella - $250\n2-Fugazzeta - $280\n3-Calabrese - $300\n4-Napolitana - $300\n\t"))
+print("\nElija un tamanio:\n")
+tamanio = int(input("1- 8 porciones - $0 extra\n2- 10 Porciones - $30 extra\n3- 12 Porciones - $40 extra\n\t"))
+print("\nElija un tipo de cocción:\n")
+tipo_coccion = int(input("1- A la piedra\n2- A la parrilla\n3- De molde\n\t"))
+"""
