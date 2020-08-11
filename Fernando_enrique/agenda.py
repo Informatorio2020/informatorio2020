@@ -2,35 +2,24 @@
 
 
 
-
 class Contacto():
-	agenda = []
+	
 	def __init__(self,nombre, telefono,mail):
 		self.nombre=nombre
 		self.telefono=telefono
 		self.mail=mail
-		agenda.append(nombre)
+		agenda[nombre]= [telefono, mail]
+	def __str__ (self):
+		return nombre
 
-		def __str_ (self):
-			return nombre
+agenda = {}
+prueba=[]
+nom = input("Ingrese nombre")
+tel= input("ingrese tel")
+mail=input ("ingrese mail")
+contact = Contacto(nom, tel, mail)
 
 
-salir = True
-
-while True:
-	nom = input("Ingrese nombre")
-	if nom in agenda:
-		print("contacto existente")
-		continue
-	tel= input("ingrese tel")
-	mail=input ("ingrese mail")
-	contac=contacto(nom,tel,mail)
-
-	op=input("para salir  escriba si")
-	if po == si:
-		salir = False
-
-print (pedro)
 
 
 
