@@ -10,6 +10,3 @@ elif sueldo>6000 and sueldo<=7900:
 elif sueldo>7900 and sueldo<=12000:
 	premio= sueldo+(sueldo*6)/100
 	print("su sueldo nuevo es:",premio)	  	
-else:
-	print("Usted cobra mas de 12000")
-print("END")
