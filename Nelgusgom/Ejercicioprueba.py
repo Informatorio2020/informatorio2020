@@ -1,3 +1,5 @@
+#estamos probando una nueva clase
+
 class Persona:
 	def __init__(self, nombre, dni):
 		self.nombre = nombre
@@ -11,7 +13,7 @@ class Paciente(Persona):
 
 Persona1 = Persona("Nelson", 20338643)
 Persona2 = Persona("Gabriel", 39225552)
-Paciente1 = Paciente("Lilian", 22665765,"HC N° 1234")
-Paciente2 = Paciente("Martin", 42190411,"HC N° 5678")
-print(Persona1.nombre)
-print(Paciente1.nombre)
+Paciente1 = Paciente("Lilian", 22665765,"HC1234")
+Paciente2 = Paciente("Martin", 42190411,"HC5678")
+print("Nombre: ", Persona1.nombre," DNI nº: ", Persona1.dni)
+print("Nombre: ", Paciente1.nombre," Historia clìnica nº: ", Paciente1.historia_clinica)
