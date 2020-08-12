@@ -24,3 +24,36 @@ print(Persona1)
 
 
 
+
+
+class Contacto():
+	agenda = []
+	def __init__(self, nombre, telefono, email):
+		self.nombre= nombre
+		self.telefono = telefono
+		self.email = email
+
+	def __str__(self):
+		return "Nombre: {} - Teléfono: {} - Email: {}".format(self.nombre,self.telefono,self.email)
+
+	def aniadir(self):
+		Contacto.agenda.append(self)#[self.nombre] = [self.telefono,self.email]
+
+
+	def listar(self):
+		for a in Contacto.agenda:
+			print(a)
+
+	def buscar(self, nombre):
+		for a in Contacto.agenda:
+			if a.nombre == nombre:
+				print(a)
+
+	def editar(self, editar):
+		for a in Contacto.agenda:
+			if a.nombre == editar:            
+				a.nombre = input("Ingrese el nombre:")
+				a.telefono = input("Ingrese el teléfono:")
+				a.email = input("Ingrese el email:")
+				return("Contacto editado")
+				return("No se encuentra el contacto")
