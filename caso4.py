@@ -58,3 +58,6 @@ while salir != 0:
     elif salir == 4:
         editar = input("Ingrese el nombre de un contacto a editar: ")
         print(Contacto.editar(Contacto.agenda,editar))
+        
+        #Esto lo agregue para dar conflictos
+        #Soy perversita
