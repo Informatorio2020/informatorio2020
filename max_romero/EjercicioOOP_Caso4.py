@@ -12,7 +12,7 @@ Además deberá mostrar un menú con las siguientes opciones.
 
 class Contact: 
     
-    contact_list={}
+    contact_list=[]
     
     """def menu(self):
     opt=0
@@ -53,11 +53,11 @@ class Contact:
     def get_contact_name(self):
         return f'Nombre: {self.name}'
    
-    def get_contact_phone(self):
+    """def get_contact_phone(self):
         return f'Telefono: {self.phone_number}'
 
     def get_contact_(self):
-        return f'E-mail: {self.email}'
+        return f'E-mail: {self.email}'"""
 
 #Setters
 

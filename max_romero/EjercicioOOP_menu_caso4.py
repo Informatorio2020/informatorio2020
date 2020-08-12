@@ -1,12 +1,23 @@
-
-class Contact: 
-    
-    contact_list={}
+class Contact:
     
     def __init__(self, name, phone_number, email):
         self.name=name
         self.phone_number=phone_number
-        self.email=email 
+        self.email=email
+
+
+class Agenda: 
+    
+    contact_list=[]
+
+    def add_contact(self):
+        input('Ingrese nombre: ')
+        input('Ingrese telefono: ')
+        input('Ingrese e-mail: ')
+
+        
+        
+            
     
     def menu(self):
         opt=0
@@ -26,7 +37,7 @@ class Contact:
             elif opt==3:
                 #Buscar por nombre 
             elif opt==4:
-                #Editar contacto
+                #Buscar y editar contacto
                 print('<<< EDITAR CONTACTO >>>')
                 print('1-Editar nombre')
                 print('2-Editar numero de telefono')
