@@ -1,8 +1,4 @@
-print("Hola mundo")
-print("clase de versionado")
-print("mas cambios")
-print("Agregados con rebase")
-print("Cambios del local. Nuevos cambios desde el remoto")
+
 print("Cambios hechos en la rama")
 print("Cambios del local")
 print("nuevos cambios desde el remoto")
