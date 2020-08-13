@@ -1,3 +1,16 @@
+"""
+CASO 4: Realizar una clase que administre una agenda.
+Se debe almacenar para cada contacto el nombre, el teléfono y el email. 
+Además deberá mostrar un menú con las siguientes opciones.
+
+- Añadir contacto[]
+- Lista de contactos[]
+- Buscar contacto[]
+- Editar contacto[]
+- Cerrar agenda[]
+"""
+
+
 class Contact:
     
     def __init__(self, name, phone_number, email):
@@ -14,15 +27,17 @@ class Agenda:
         input('Ingrese nombre: ')
         input('Ingrese telefono: ')
         input('Ingrese e-mail: ')
-
+        contact_list.append()
+        
         
         
             
     
-    def menu(self):
+    
+    """def menu(self):
         opt=0
         while opt !=5:
-            print("<<< MENU >>>: ")
+            print("<<< MENU >>> ")
             print("1-Agregar contacto ") 
             print("2-Lista de contactos ") 
             print("3-Buscar contacto ")
@@ -66,7 +81,7 @@ class Agenda:
         
         
         
-        """else:
+        else:
             if opcion==2:
                 self.listar()
             else:
