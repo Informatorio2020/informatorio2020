@@ -1,3 +1,0 @@
-#
-
-import OperacionesComunes as Operacion
